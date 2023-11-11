@@ -1,0 +1,37 @@
+Label.title {
+    -fx-font-size: 2em;
+    -fx-font-fill: #016A91;
+    -fx-font-weight: bold;
+}
+
+.form-container {
+    -fx-font-size: 1.2em;
+    -fx-fill: #888888;
+}
+
+.form-container VBox {
+    -fx-border-width: 0 0 0 1;
+    -fx-border-color: #016A91;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+.form-container TextField {
+    -fx-pref-height: 35;
+    -fx-background-color: #FFF;
+    -fx-font-size: 1.3em;
+    -fx-effect: dropshadow(three-pass-box, #aaa, 3, 0, 0, 3);
+}
+
+.form-container Button {
+    -fx-background-color: linear-gradient(to right , #0A3353, #016A91);
+    -fx-effect: dropshadow(three-pass-box, #aaa, 3, 0, 0, 3);
+    -fx-pref-width: 150;
+    -fx-font-size: 1.3em;
+    -fx-text-fill: #fff;
+}
+
+.form-container Button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(to left , #0A3353, #016A91);
+}

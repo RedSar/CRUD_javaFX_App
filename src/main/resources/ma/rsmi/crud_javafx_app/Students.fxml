@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="form-container" stylesheets="@../../../css/styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.rsmi.crud_javafx_app.controllers.StudentController">
+   <children>
+      <VBox layoutX="36.0" layoutY="160.0" prefHeight="280.0" prefWidth="250.0" spacing="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <Label text="Firstname">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></Label>
+            <TextField fx:id="tfFirstname" />
+            <Label layoutX="20.0" layoutY="30.0" text="Lastname" />
+            <TextField fx:id="tfLastname" layoutX="20.0" layoutY="67.0" />
+            <Label layoutX="20.0" layoutY="112.0" text="Course" />
+            <TextField fx:id="tfCourse" layoutX="20.0" layoutY="149.0" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" right="10.0" top="20.0" />
+         </padding>
+      </VBox>
+       <TableView fx:id="tblStudents" layoutX="412.0" layoutY="120.0" onMouseClicked="#getDataAndPopulateForm" prefHeight="280.0" prefWidth="600.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="120.0">
+           <columns>
+               <TableColumn fx:id="colId" prefWidth="44.0" text="Id" />
+               <TableColumn fx:id="colFirstname" minWidth="200.0" prefWidth="136.0" text="FirstName" />
+            <TableColumn fx:id="colLastname" minWidth="200.0" prefWidth="142.0" text="LastName" />
+            <TableColumn fx:id="colCourse" minWidth="300.0" prefWidth="277.0" text="Course" />
+           </columns>
+       </TableView>
+      <ButtonBar layoutX="187.0" layoutY="520.0" prefHeight="40.0">
+        <buttons>
+            <Button fx:id="btnSaveStudent" mnemonicParsing="false" onAction="#saveStudent" text="Save" />
+            <Button fx:id="btnUpdateStudent" disable="true" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateStudent" text="Update" />
+            <Button fx:id="btnDeleteStudent" disable="true" layoutX="50.0" layoutY="18.0" mnemonicParsing="false" onAction="#deleteStudent" text="Delete" />
+            <Button fx:id="btnClearFields" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="39.0" text="Clear" />
+        </buttons>
+      </ButtonBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="303.0" layoutY="14.0" prefHeight="42.0" prefWidth="450.0" styleClass="title" text="CRUD Student Application" textAlignment="CENTER" textFill="#016a91" />
+      <Separator layoutX="303.0" layoutY="56.0" prefHeight="17.0" prefWidth="450.0" />
+   </children>
+</AnchorPane>
